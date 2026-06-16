@@ -92,3 +92,4 @@ Results are saved to `Replica_X/output_fused/`:
 - Python 3.8+
 - CUDA-compatible GPU (recommended: 4GB+ VRAM)
 - PyTorch, rembg, trimesh, open3d
+> For best performance, use the latest stable NVIDIA GPU drivers and a CUDA version compatible with your PyTorch installation.
