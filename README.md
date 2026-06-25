@@ -6,7 +6,7 @@ A deep learning pipeline to reconstruct high-fidelity 3D objects from 2D photogr
 
 ## 📌 Overview
 
-This project implements a multi-view 3D reconstruction pipeline that:
+This project implements a multi-view 3D reconstruction pipeline that: 
 
 1. Takes **2–3 photos** of an object from different angles
 2. Removes background and normalizes each image
