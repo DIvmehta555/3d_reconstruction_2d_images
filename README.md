@@ -93,3 +93,17 @@ Results are saved to `Replica_X/output_fused/`:
 - CUDA-compatible GPU (recommended: 4GB+ VRAM)
 - PyTorch, rembg, trimesh, open3d
 > For best performance, use the latest stable NVIDIA GPU drivers and a CUDA version compatible with your PyTorch installation.
+
+## 🖼️ Example Output
+
+> _Add a screenshot/GIF here once you run the pipeline — showing input 2D photos alongside the reconstructed, colored 3D mesh (`.glb`/`.obj`)._
+
+---
+
+## 🐛 Troubleshooting
+
+- **CUDA not found / no GPU detected**: Verify with `torch.cuda.is_available()` in Python. Without a compatible NVIDIA GPU, reconstruction will be very slow or fail.
+- **CUDA out of memory**: Lower `MC_RESOLUTION` (e.g. from 256 to 128) or use fewer input images per run.
+- **rembg model download fails**: Ensure a stable internet connection on first run — `REMBG_MODEL` weights download automatically on first use.
+- **Mesh has holes / missing thin structures**: Try lowering `MC_THRESHOLD` slightly.
+- **Colors look wrong/blended oddly**: Check `COLOR_BLEND_MODE` — `weighted` mode blends colors from all views; try providing a clearer front-facing image if results look off.
